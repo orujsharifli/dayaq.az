@@ -1,0 +1,144 @@
+/* --------------------------------------------------------------------- */
+/* ---------------------- RESPONSIVE CSS ---------------------- */
+/* X-Small */
+@media only screen and (min-width: 0px) {
+    .mobile-menu .icon-x {
+        right: 30px;
+    }
+
+    .navbar-search-form input {
+        width: 205px;
+    }
+
+    .main-slider .content h2 {
+        font-size: 30px;
+    }
+
+    .sec-title h2,
+    .partners h2 {
+        font-size: 35px;
+    }
+
+    .to-be-useful .btn-one {
+        padding: 15px 52px;
+    }
+
+    .page-title h1 {
+        font-size: 32px;
+    }
+
+    .card.blogbox .blogbox-top-img {
+        aspect-ratio: 23/20;
+    }
+
+    .accordion-item {
+        padding: 15px 50px 15px 20px;
+    }
+
+    .accordion-button h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .accordion-button::after {
+        right: -15px;
+    }
+}
+
+/* Small */
+@media only screen and (min-width: 576px) {
+    .mobile-menu .icon-x {
+        right: 65px;
+    }
+
+    .main-slider .content .text p {
+        font-size: 18px;
+    }
+}
+
+/* Medium */
+@media only screen and (min-width: 768px) {
+    .mobile-menu .icon-x {
+        right: 65px;
+    }
+
+    .main-slider .content h2 {
+        font-size: 40px;
+    }
+
+    .main-slider .content .text p {
+        font-size: 22px;
+    }
+}
+
+/* Large */
+@media only screen and (min-width: 992px) {
+    .classic-form input[type="file"]::before {
+        content: "Şəkil yüklə";
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .navbar-search-form input {
+        width: auto;
+    }
+
+    .py-lg {
+        padding: 100px 0 !important;
+    }
+
+    .sec-title h2,
+    .partners h2 {
+        font-size: 48px;
+    }
+
+    .to-be-useful .main {
+        width: 430px !important;
+    }
+
+    .to-be-useful .btn-one {
+        padding: 15px 25px;
+    }
+
+    .footer-wr .row:first-child {
+        padding-bottom: 80px !important;
+    }
+
+    .ongoing-projects-area {
+        padding-top: 100px !important;
+    }
+
+    .page-title h1 {
+        font-size: 48px;
+    }
+
+    .card.blogbox .blogbox-top-img {
+        aspect-ratio: 647/150;
+    }
+
+    .last-videoiframe {
+        padding-top: 0 !important;
+        padding-bottom: 100px !important;
+    }
+
+    .accordion-item {
+        padding: 30px;
+    }
+
+    .accordion-button h4 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .accordion-button::after {
+        right: 0;
+    }
+}
+
+/* Extra large */
+@media only screen and (min-width: 1200px) {
+    .main-slider .content h2 {
+        font-size: 80px;
+    }
+}

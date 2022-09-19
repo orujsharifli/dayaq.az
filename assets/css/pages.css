@@ -1,0 +1,670 @@
+/* --------------------------------------------------------------------- */
+/* ---------------------- PAGES CSS ---------------------- */
+
+/* Page title */
+.page-title {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 109px 0 115px;
+    z-index: 2;
+}
+
+.page-title h1 {
+    text-align: center;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.page-title .border-box {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: var(--white);
+    margin: 19px auto 24px;
+}
+
+/* Shape 1 */
+.page-title .shape-0001 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    z-index: 1;
+}
+
+/* Shape 2 */
+.page-title .shape-0002 {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 1;
+}
+
+.page-title .border-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: var(--valencia);
+}
+
+.page-title:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--vulcan);
+    opacity: 0.75;
+    content: "";
+    z-index: -1;
+}
+
+/* [ABOUT US PAGE] */
+.main-page-content p {
+    line-height: 2;
+}
+
+.left-rotate .container {
+    position: relative;
+}
+
+.left-rotate .rotate-me-figure {
+    position: absolute;
+    top: 0;
+    left: -70px;
+}
+
+.border-r20 {
+    border-radius: 20px;
+}
+
+/* Persons card */
+.card.persons-card {
+    border: none;
+    box-shadow: 0px 5px 24px 6px rgb(0 0 0 / 6%);
+}
+
+.card.persons-card img {
+    height: 350px;
+}
+
+.card.persons-card .img-hover-zoom {
+    position: relative;
+}
+
+.card.persons-card .img-hover-zoom::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 10;
+}
+
+.card.persons-card:hover .img-hover-zoom::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+}
+
+.card.persons-card .card-body {
+    padding: 24px 0;
+    text-align: center;
+}
+
+.card.persons-card .card-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Teams card body blue background */
+.teams .card.persons-card .card-body {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.teams .card.persons-card .card-body::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    background: var(--pickled-bluewood);
+    transition-delay: .05s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    opacity: 0;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transform: scaleY(0);
+    z-index: -1;
+}
+
+.teams .card.persons-card:hover .card-body::after {
+    opacity: 1;
+    transform: scaleY(1.0);
+}
+
+.teams .card.persons-card:hover h5,
+.teams .card.persons-card:hover p {
+    color: var(--white);
+}
+
+.yt-iframe iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+/* [HOW WE WORK PAGE] */
+/* Question accordions */
+.accordion-item {
+    border: none;
+    background: var(--white);
+    margin-bottom: 25px;
+    box-shadow: 0px 5px 24px 6px rgb(0 0 0 / 6%);
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-button {
+    position: relative;
+    display: block;
+    color: var(--mine-shaft);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.accordion-button::after {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f06e";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    color: var(--mine-shaft);
+    font-size: 20px;
+    opacity: 1;
+    transition: none;
+    background-image: none;
+    height: auto;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--valencia);
+    background: var(--white);
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "\f070";
+    background-image: none;
+    color: var(--valencia);
+}
+
+.accordion-button h4 {
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.accordion-body {
+    line-height: 2;
+}
+
+/* [BLOGS PAGE] */
+.blogs .col-xl-4 {
+    margin: 16px 0;
+}
+
+.card.blog-card a:first-child {
+    position: relative;
+}
+
+.card.blog-card .img-hover-zoom:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black);
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    -webkit-transform: perspective(400px) rotateX(-90deg);
+    -ms-transform: perspective(400px) rotateX(-90deg);
+    transform: perspective(400px) rotateX(-90deg);
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    z-index: 1;
+}
+
+.card.blog-card:hover .img-hover-zoom:before {
+    opacity: .65;
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+}
+
+.card.blog-card img {
+    height: 200px;
+}
+
+.card.blog-card .entry-date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 35px;
+    color: var(--white);
+    background: #46b3a8;
+    z-index: 2;
+}
+
+.card.blog-card .fa-plus-wr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: scale(0);
+    transition: all 200ms linear;
+    transition-delay: 0.5s;
+    z-index: 2;
+}
+
+.card.blog-card .fa-plus-wr .fa-plus {
+    color: var(--white);
+    font-size: 50px;
+}
+
+.card.blog-card:hover .fa-plus-wr {
+    opacity: 1;
+    transform: scale(1.0);
+    transition: all 200ms linear;
+    transition-delay: 0.3s;
+}
+
+.card.blog-card .img-hover-zoom:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.10;
+    background: var(--black);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    opacity: 1;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: scaleY(0);
+    z-index: 1;
+}
+
+.card.blog-card:hover .img-hover-zoom:after {
+    opacity: 0.35;
+    transform: scaleY(1.0);
+}
+
+.card.blog-card .card-body {
+    padding: 48px;
+}
+
+.card.blog-card .card-body a {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    color: var(--mine-shaft);
+}
+
+.card.blog-card .card-body a:hover {
+    color: var(--valencia);
+}
+
+.card.blog-card .card-body p {
+    line-height: 2;
+    margin-top: 16px;
+}
+
+/* [CONTACT PAGE] */
+.large-form-top-text {
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.contact .contact-boxes-row {
+    margin-top: 48px;
+}
+
+.contact .contact-boxes-row>* {
+    margin: 8px 0;
+}
+
+.contact .contact-boxes-row>* .card-body {
+    padding-left: 0;
+}
+
+/* Input box */
+.input-box {
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    font-size: 15px;
+    color: var(--curious-blue);
+}
+
+/* Contact cards */
+.contact .card {
+    border: none;
+}
+
+/* Contact box top circle */
+.contact-box-top-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: var(--white);
+    background: var(--valencia);
+    margin-right: 16px;
+}
+
+.contact .card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Map iframe */
+.map-frame-custom {
+    height: 600px;
+}
+
+.map-frame-custom iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------------------------------------------------- */
+/* ---------------------- SEPARATELY PAGES ---------------------- */
+
+/* [BLOGS SEPARATELY PAGES] */
+.card.blogbox .card-body {
+    padding: 24px;
+}
+
+.card.blogbox .card-body>* {
+    margin-bottom: 16px !important;
+}
+
+.card.blogbox .card-body>*:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Blogbox post details */
+.blogbox-post-details {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.blogbox-post-details .blog-post-detail {
+    color: var(--mine-shaft);
+}
+
+.blogbox-post-details i {
+    color: var(--valencia);
+    margin-right: 8px;
+}
+
+.blog-post-detail:first-child {
+    margin-right: 24px;
+}
+
+/* Blogbox small images */
+.card.blogbox .sm-images>*,
+.sm-text>* {
+    margin: 16px 0;
+}
+
+.card.blogbox .sm-images img {
+    height: 250px;
+}
+
+/* Blogbox any text */
+.card.blogbox .card-body p {
+    line-height: 2;
+}
+
+/* Blogbox list report */
+.card.blogbox .card-body .list-report {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.card.blogbox .card-body .list-report p {
+    margin-bottom: 0;
+}
+
+.card.blogbox .card-body .list-report i {
+    font-size: 6px;
+    color: var(--black);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Blogbox middle title */
+.card.blogbox .card-body .middle-title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 28px;
+    padding: 8px 0;
+}
+
+.card.blogbox .card-body .small-title {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.card.blogbox .card-body .payment-for-assistance {
+    padding: 24px 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Blogbox comment */
+.blogbox-comment {
+    display: flex;
+    margin-top: 48px;
+}
+
+.blogbox-comment .img-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.blogbox-comment .text-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.blogbox-comment .text-box .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogbox-comment .text-box .top .left h4 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.blogbox-comment .text-box .text {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+/* Hashtag link */
+.hashtags {
+    display: flex;
+    flex-direction: column;
+}
+
+.hashtag-link:first-child {
+    margin-bottom: 4px;
+}
+
+.hashtag-link {
+    color: var(--denim);
+}
+
+.hashtag-link:hover {
+    color: var(--torea-bay);
+}
+
+/* Blogbox form */
+.comment-reply-titles {
+    margin-bottom: 24px;
+}
+
+.comment-reply-title {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.comment-reply-titles .cancel {
+    color: var(--valencia);
+    background: transparent;
+    font-size: 17px;
+    margin-left: 12px;
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+
+.comment-reply-titles .cancel i {
+    margin-right: 8px;
+}
+
+.large-form input,
+.large-form textarea {
+    padding: 18px 20px;
+}
+
+/* [DAYAG CHARITY HOME REFER SEPARATELY PAGES] */
+.card.blogbox.home-refer {
+    border: none;
+}
+
+.card.blogbox.home-refer .blogbox-top-img {
+    aspect-ratio: 222/125;
+}
+
+.sm-text p {
+    margin-bottom: 0;
+    text-align: justify;
+    color: var(--mine-shaft-light);
+}
+
+.middle-link {
+    padding: 12px 24px;
+    text-align: center;
+    color: var(--white) !important;
+    background: var(--golden-grass);
+}
+
+.middle-link:hover {
+    background: var(--curious-blue);
+}
+
+/* All [continuation lines button] */
+.continuation-lines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.continuation-line {
+    font-size: 18px;
+    color: var(--mine-shaft) !important;
+    background: var(--alabaster);
+    padding: 13px 15px;
+}
+
+.continuation-line:hover {
+    background: var(--gallery);
+}
+
+.continuation-line.all {
+    color: var(--white) !important;
+    background: var(--curious-blue);
+}
+
+.continuation-line.all:hover {
+    background: var(--curious-blue-dark);
+}
+
+.continuation-line.ongoing {
+    color: var(--white) !important;
+    background: var(--golden-grass);
+}
+
+.continuation-line.ongoing:hover {
+    background: var(--tangerine);
+}
+
+.continuation-line.completed {
+    color: var(--white) !important;
+    background: var(--eucalyptus);
+}
+
+.continuation-line.completed:hover {
+    background: var(--forest-green);
+}
+
+/* FINISH PAGE CSS */
